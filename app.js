@@ -66,6 +66,11 @@ app.post('/upload', (req, res) => {
                     msg: 'Error : No File Selected'
                 });
             }else{
+                /***
+                 * do console.log(req.file) to see the 
+                 * details of file uploaded
+                 */
+                console.log(req.file);
                 res.render('index', {
                     msg: 'File uploaded!',
                     file: `uploads/${req.file.filename}`
