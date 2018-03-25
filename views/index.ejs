@@ -7,7 +7,13 @@
     <title>Image Upload</title>
     <!-- materialize css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
+    <style>
+      .responsive {
+          width: 100%;
+          height: auto;
+          align-self: auto;
+      }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -26,6 +32,8 @@
                 </div>
                 <button type="submit" class="btn">Submit</button>
         </form>
+        <br>
+        <img src="<%= typeof file != 'undefined' ? file : '' %>" width="840" height="480" alt="Image Rendering Error!!" class="responsive">
     </div>
   
     <!-- jquery cdn -->
